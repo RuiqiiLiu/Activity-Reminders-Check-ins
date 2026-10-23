@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reminders and Check-ins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="site-header">
+      <p class="brand"><span class="brand-mark" aria-hidden="true">/</span>CHECK / IN</p>
+      <div class="header-caption">
+        <p>Personal activity system</p>
+        <p>Reminders &amp; check-ins</p>
+      </div>
+    </header>
+    <main>
+      <section class="today" aria-labelledby="today-date">
+        <h1 id="today-date" class="today-date">
+          <span class="day">17</span>
+          <span class="month-weekday">Oct - Wed</span>
+        </h1>
+        <h2>Today To-Do:</h2>
+        <ol class="todo-list">
+          <li class="todo-item">
+            <label class="check-in">
+              <span class="task-number" aria-hidden="true">01</span>
+              <span class="task-name">Read for 10 mins</span>
+              <input class="check-in-input" type="checkbox" name="read-complete">
+              <span class="check-in-status" aria-hidden="true"></span>
+            </label>
+          </li>
+          <li class="todo-item">
+            <label class="check-in">
+              <span class="task-number" aria-hidden="true">02</span>
+              <span class="task-name">Run for 20 mins</span>
+              <input class="check-in-input" type="checkbox" name="run-complete" checked>
+              <span class="check-in-status" aria-hidden="true"></span>
+            </label>
+          </li>
+        </ol>
+      </section>
+
+      <section class="activity-history" aria-labelledby="activity-heading">
+        <h2 id="activity-heading">Activity History</h2>
+        <div class="history-toolbar">
+          <ul class="legend" aria-label="Activity status legend">
+            <li><span class="legend-square is-complete" aria-hidden="true"></span>Complete</li>
+            <li><span class="legend-square is-pending" aria-hidden="true"></span>Pending</li>
+            <li><span class="legend-square is-not-scheduled" aria-hidden="true"></span>Not scheduled</li>
+          </ul>
+          <a class="add-link" href="#add-reminder">+ Add</a>
+        </div>
+        <div class="activity-rows">
+          <article class="activity-row" aria-labelledby="read-heading">
+            <div class="activity-details">
+              <h3 id="read-heading">Read</h3>
+              <p>Daily</p>
+            </div>
+            <div class="activity-calendar">
+              <div class="month-picker" role="group" aria-label="Read history month">
+                <input class="month-select visually-hidden" type="radio" name="read-month" id="read-month-9" aria-label="September history">
+                <input class="month-select visually-hidden" type="radio" name="read-month" id="read-month-10" aria-label="October history" checked>
+                <input class="month-select visually-hidden" type="radio" name="read-month" id="read-month-11" aria-label="November history">
+                <section class="month-panel month-9" aria-labelledby="read-9-heading">
+                  <div class="month-toolbar">
+                    <span class="month-arrow is-disabled" aria-hidden="true">←</span>
+                    <h4 id="read-9-heading">September</h4>
+                    <label class="month-arrow" for="read-month-10" title="October" aria-label="Show October">→</label>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="September 1 to 7">
+                      <li class="is-complete" tabindex="0" aria-label="September 1: complete" data-day="1"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 2: complete" data-day="2"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 3: complete" data-day="3"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 4: complete" data-day="4"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 5: complete" data-day="5"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 6: complete" data-day="6"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 7: complete" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="September 8 to 14">
+                      <li class="is-complete" tabindex="0" aria-label="September 8: complete" data-day="8"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 9: complete" data-day="9"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 10: complete" data-day="10"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 11: complete" data-day="11"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 12: complete" data-day="12"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 13: complete" data-day="13"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 14: complete" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="September 15 to 21">
+                      <li class="is-complete" tabindex="0" aria-label="September 15: complete" data-day="15"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 16: complete" data-day="16"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 17: complete" data-day="17"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 18: complete" data-day="18"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 19: complete" data-day="19"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 20: complete" data-day="20"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 21: complete" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="September 22 to 30">
+                      <li class="is-complete" tabindex="0" aria-label="September 22: complete" data-day="22"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 23: complete" data-day="23"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 24: complete" data-day="24"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 25: complete" data-day="25"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 26: complete" data-day="26"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 27: complete" data-day="27"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 28: complete" data-day="28"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 29: complete" data-day="29"></li>
+                      <li class="is-complete" tabindex="0" aria-label="September 30: complete" data-day="30"></li>
+                      <li class="is-not-scheduled" aria-label="No date: not scheduled"></li>
+                    </ol>
+                  </div>
+                </section>
+                <section class="month-panel month-10" aria-labelledby="read-10-heading">
+                  <div class="month-toolbar">
+                    <label class="month-arrow" for="read-month-9" title="September" aria-label="Show September">←</label>
+                    <h4 id="read-10-heading">October</h4>
+                    <label class="month-arrow" for="read-month-11" title="November" aria-label="Show November">→</label>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="October 1 to 7">
+                      <li class="is-complete" tabindex="0" aria-label="October 1: complete" data-day="1"></li>
+                      <li class="is-complete" tabindex="0" aria-label="October 2: complete" data-day="2"></li>
+                      <li class="is-complete" tabindex="0" aria-label="October 3: complete" data-day="3"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 4: pending" data-day="4"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 5: pending" data-day="5"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 6: pending" data-day="6"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 7: pending" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="October 8 to 14">
+                      <li class="is-pending" tabindex="0" aria-label="October 8: pending" data-day="8"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 9: pending" data-day="9"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 10: pending" data-day="10"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 11: pending" data-day="11"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 12: pending" data-day="12"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 13: pending" data-day="13"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 14: pending" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="October 15 to 21">
+                      <li class="is-pending" tabindex="0" aria-label="October 15: pending" data-day="15"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 16: pending" data-day="16"></li>
+                      <li class="is-pending current-day" tabindex="0" aria-label="October 17: pending" data-day="17" aria-current="date"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 18: scheduled" data-day="18"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 19: scheduled" data-day="19"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 20: scheduled" data-day="20"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 21: scheduled" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="October 22 to 31">
+                      <li class="is-pending" tabindex="0" aria-label="October 22: scheduled" data-day="22"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 23: scheduled" data-day="23"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 24: scheduled" data-day="24"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 25: scheduled" data-day="25"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 26: scheduled" data-day="26"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 27: scheduled" data-day="27"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 28: scheduled" data-day="28"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 29: scheduled" data-day="29"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 30: scheduled" data-day="30"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 31: scheduled" data-day="31"></li>
+                    </ol>
+                  </div>
+                </section>
+                <section class="month-panel month-11" aria-labelledby="read-11-heading">
+                  <div class="month-toolbar">
+                    <label class="month-arrow" for="read-month-10" title="October" aria-label="Show October">←</label>
+                    <h4 id="read-11-heading">November</h4>
+                    <span class="month-arrow is-disabled" aria-hidden="true">→</span>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="November 1 to 7">
+                      <li class="is-pending" tabindex="0" aria-label="November 1: scheduled" data-day="1"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 2: scheduled" data-day="2"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 3: scheduled" data-day="3"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 4: scheduled" data-day="4"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 5: scheduled" data-day="5"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 6: scheduled" data-day="6"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 7: scheduled" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="November 8 to 14">
+                      <li class="is-pending" tabindex="0" aria-label="November 8: scheduled" data-day="8"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 9: scheduled" data-day="9"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 10: scheduled" data-day="10"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 11: scheduled" data-day="11"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 12: scheduled" data-day="12"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 13: scheduled" data-day="13"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 14: scheduled" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="November 15 to 21">
+                      <li class="is-pending" tabindex="0" aria-label="November 15: scheduled" data-day="15"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 16: scheduled" data-day="16"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 17: scheduled" data-day="17"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 18: scheduled" data-day="18"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 19: scheduled" data-day="19"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 20: scheduled" data-day="20"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 21: scheduled" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="November 22 to 30">
+                      <li class="is-pending" tabindex="0" aria-label="November 22: scheduled" data-day="22"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 23: scheduled" data-day="23"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 24: scheduled" data-day="24"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 25: scheduled" data-day="25"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 26: scheduled" data-day="26"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 27: scheduled" data-day="27"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 28: scheduled" data-day="28"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 29: scheduled" data-day="29"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 30: scheduled" data-day="30"></li>
+                    </ol>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </article>
+          <article class="activity-row" aria-labelledby="run-heading">
+            <div class="activity-details">
+              <h3 id="run-heading">Run</h3>
+              <p>Weekly · Wednesday</p>
+            </div>
+            <div class="activity-calendar">
+              <div class="month-picker" role="group" aria-label="Run history month">
+                <input class="month-select visually-hidden" type="radio" name="run-month" id="run-month-9" aria-label="September history">
+                <input class="month-select visually-hidden" type="radio" name="run-month" id="run-month-10" aria-label="October history" checked>
+                <input class="month-select visually-hidden" type="radio" name="run-month" id="run-month-11" aria-label="November history">
+                <section class="month-panel month-9" aria-labelledby="run-9-heading">
+                  <div class="month-toolbar">
+                    <span class="month-arrow is-disabled" aria-hidden="true">←</span>
+                    <h4 id="run-9-heading">September</h4>
+                    <label class="month-arrow" for="run-month-10" title="October" aria-label="Show October">→</label>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="September 1 to 7">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 1: not scheduled" data-day="1"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 2: not scheduled" data-day="2"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 3: not scheduled" data-day="3"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 4: not scheduled" data-day="4"></li>
+                      <li class="is-pending" tabindex="0" aria-label="September 5: no check-in recorded" data-day="5"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 6: not scheduled" data-day="6"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 7: not scheduled" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="September 8 to 14">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 8: not scheduled" data-day="8"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 9: not scheduled" data-day="9"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 10: not scheduled" data-day="10"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 11: not scheduled" data-day="11"></li>
+                      <li class="is-pending" tabindex="0" aria-label="September 12: no check-in recorded" data-day="12"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 13: not scheduled" data-day="13"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 14: not scheduled" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="September 15 to 21">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 15: not scheduled" data-day="15"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 16: not scheduled" data-day="16"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 17: not scheduled" data-day="17"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 18: not scheduled" data-day="18"></li>
+                      <li class="is-pending" tabindex="0" aria-label="September 19: no check-in recorded" data-day="19"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 20: not scheduled" data-day="20"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 21: not scheduled" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="September 22 to 30">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 22: not scheduled" data-day="22"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 23: not scheduled" data-day="23"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 24: not scheduled" data-day="24"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 25: not scheduled" data-day="25"></li>
+                      <li class="is-pending" tabindex="0" aria-label="September 26: no check-in recorded" data-day="26"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 27: not scheduled" data-day="27"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 28: not scheduled" data-day="28"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 29: not scheduled" data-day="29"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="September 30: not scheduled" data-day="30"></li>
+                    </ol>
+                  </div>
+                </section>
+                <section class="month-panel month-10" aria-labelledby="run-10-heading">
+                  <div class="month-toolbar">
+                    <label class="month-arrow" for="run-month-9" title="September" aria-label="Show September">←</label>
+                    <h4 id="run-10-heading">October</h4>
+                    <label class="month-arrow" for="run-month-11" title="November" aria-label="Show November">→</label>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="October 1 to 7">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 1: not scheduled" data-day="1"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 2: not scheduled" data-day="2"></li>
+                      <li class="is-complete" tabindex="0" aria-label="October 3: complete" data-day="3"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 4: not scheduled" data-day="4"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 5: not scheduled" data-day="5"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 6: not scheduled" data-day="6"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 7: not scheduled" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="October 8 to 14">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 8: not scheduled" data-day="8"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 9: not scheduled" data-day="9"></li>
+                      <li class="is-complete" tabindex="0" aria-label="October 10: complete" data-day="10"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 11: not scheduled" data-day="11"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 12: not scheduled" data-day="12"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 13: not scheduled" data-day="13"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 14: not scheduled" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="October 15 to 21">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 15: not scheduled" data-day="15"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 16: not scheduled" data-day="16"></li>
+                      <li class="is-complete current-day" tabindex="0" aria-label="October 17: complete" data-day="17" aria-current="date"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 18: not scheduled" data-day="18"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 19: not scheduled" data-day="19"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 20: not scheduled" data-day="20"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 21: not scheduled" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="October 22 to 31">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 22: not scheduled" data-day="22"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 23: not scheduled" data-day="23"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 24: scheduled" data-day="24"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 25: not scheduled" data-day="25"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 26: not scheduled" data-day="26"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 27: not scheduled" data-day="27"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 28: not scheduled" data-day="28"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 29: not scheduled" data-day="29"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="October 30: not scheduled" data-day="30"></li>
+                      <li class="is-pending" tabindex="0" aria-label="October 31: scheduled" data-day="31"></li>
+                    </ol>
+                  </div>
+                </section>
+                <section class="month-panel month-11" aria-labelledby="run-11-heading">
+                  <div class="month-toolbar">
+                    <label class="month-arrow" for="run-month-10" title="October" aria-label="Show October">←</label>
+                    <h4 id="run-11-heading">November</h4>
+                    <span class="month-arrow is-disabled" aria-hidden="true">→</span>
+                  </div>
+                  <div class="calendar-groups">
+                    <ol class="progress-week" start="1" aria-label="November 1 to 7">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 1: not scheduled" data-day="1"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 2: not scheduled" data-day="2"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 3: not scheduled" data-day="3"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 4: not scheduled" data-day="4"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 5: not scheduled" data-day="5"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 6: not scheduled" data-day="6"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 7: scheduled" data-day="7"></li>
+                    </ol>
+                    <ol class="progress-week" start="8" aria-label="November 8 to 14">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 8: not scheduled" data-day="8"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 9: not scheduled" data-day="9"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 10: not scheduled" data-day="10"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 11: not scheduled" data-day="11"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 12: not scheduled" data-day="12"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 13: not scheduled" data-day="13"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 14: scheduled" data-day="14"></li>
+                    </ol>
+                    <ol class="progress-week" start="15" aria-label="November 15 to 21">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 15: not scheduled" data-day="15"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 16: not scheduled" data-day="16"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 17: not scheduled" data-day="17"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 18: not scheduled" data-day="18"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 19: not scheduled" data-day="19"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 20: not scheduled" data-day="20"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 21: scheduled" data-day="21"></li>
+                    </ol>
+                    <ol class="progress-week" start="22" aria-label="November 22 to 30">
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 22: not scheduled" data-day="22"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 23: not scheduled" data-day="23"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 24: not scheduled" data-day="24"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 25: not scheduled" data-day="25"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 26: not scheduled" data-day="26"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 27: not scheduled" data-day="27"></li>
+                      <li class="is-pending" tabindex="0" aria-label="November 28: scheduled" data-day="28"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 29: not scheduled" data-day="29"></li>
+                      <li class="is-not-scheduled" tabindex="0" aria-label="November 30: not scheduled" data-day="30"></li>
+                    </ol>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </article>
+        </div>
+        <section class="reminder-editor" id="add-reminder" aria-labelledby="editor-heading">
+          <div class="editor-heading"><h3 id="editor-heading">Add a reminder</h3><a href="#activity-heading">Close</a></div>
+          <form class="reminder-form">
+            <label for="activity-name">Activity name</label>
+            <input id="activity-name" name="activity" type="text">
+            <label for="schedule">Repeat</label>
+            <select id="schedule" name="schedule">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="custom">Custom interval</option>
+            </select>
+            <label for="reminder-time">Reminder time</label>
+            <input id="reminder-time" name="time" type="time">
+            <fieldset>
+              <legend>Custom interval (optional)</legend>
+              <div class="interval-fields">
+                <label for="interval">Every</label>
+                <input id="interval" name="interval" type="number" min="1" value="2">
+                <label class="visually-hidden" for="interval-unit">Interval unit</label>
+                <select id="interval-unit" name="unit">
+                  <option>days</option>
+                  <option>weeks</option>
+                  <option>months</option>
+                </select>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer class="page-footer" aria-hidden="true"></footer>
+  </div>
+</body>
+</html>
+
+
