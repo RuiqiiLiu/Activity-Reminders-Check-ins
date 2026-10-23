@@ -1,26 +1,6 @@
 # CHECK / IN
 
-A Reminders and Check-ins interface built with HTML and CSS. Its visual style uses dark panels, lime accents, and a prominent date to organize daily tasks and activity history.
-
-## Current features
-
-- A sample Today To-Do list with numbered activities and interactive completion checkboxes.
-- Daily reading and weekly Wednesday running examples.
-- Unnumbered history boxes that show the date number on hover or keyboard focus.
-- Independent September, October, and November history views for each activity, selected with month arrows.
-- A reminder form preview with daily, weekly, monthly, and custom interval options.
-- Responsive styling and keyboard focus indicators.
-
-## Prototype limitations
-
-This project is a static interface prototype, not a complete reminder service. The displayed date and activity history are fixed examples.
-
-- Checkboxes change their visible state but do not save progress or update history.
-- The Add form does not create or save reminders.
-- Scheduling, notifications, editing, and deleting activities are not implemented.
-- Month navigation switches between three predefined examples; it does not load live records.
-
-These features would require JavaScript and, for account synchronization or reliable background notifications, additional services.
+I want to create a Reminders and Check-ins app that helps users organize and keep track of their activities, tasks, and personal goals. Users can create reminders, set their own schedules or time intervals, and check in when they complete an activity. The app will also remind users of unfinished tasks and allow them to review their progress over time. For the design, I want to create a clean, organized, and visually appealing interface of today’s calendar with reminder list, and progress tracker for check in. I plan to use clear visual hierarchy, consistent spacing, and a simple color palette to make the app easy to navigate and use.
 
 ## Files
 
@@ -55,5 +35,3 @@ Then open `index.html` in your browser.
 To download later updates, run `git pull` inside the cloned folder after committing or otherwise saving any local changes.
 
 ## AI use: Codex
-
-Codex assisted with implementing and refining the HTML and CSS, reviewing the interface, and updating this README based on the author's sketches and feedback.
